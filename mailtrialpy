@@ -1,0 +1,121 @@
+; ; innerclass
+; ; ----------- 
+
+; # 2)
+; # class Employee:
+; #     class Company:
+; #         def __init__(self,cname,loc,dir,c_manager):
+; #             self.cname=cname
+; #             self.loc=loc
+; #             self.dir=dir
+; #             self.c_manager=c_manager
+; #     def __init__(self,name,emp_id,age,c_name,c_loc,c_dir,c_man):#company:Company
+; #         self.name=name
+; #         self.emp_id=emp_id
+; #         self.age=age
+; #         self.company=Employee.Company(c_name,c_loc,c_dir,c_man)
+
+; #     def show_details(self):
+; #         print(f"name:{self.name}\nid:{self.emp_id}\ncompany name:{self.company.cname}\nlocation:{self.company.loc}")
+
+; # e1=Employee("mike",101,28,"ABCD","tvm","xyz","abc")
+
+; # e1.show_details()
+
+
+; ; inheritence
+; ; --------------
+; # # class Vehicle:
+; # #     def __init__(self,company,model,color,engine,fuel):
+; # #         self.company=company
+; # #         self.model=model
+; # #         self.color=color
+; # #         self.engine=engine
+; # #         self.fuel=fuel
+
+; # #     def start_engine(self):
+; # #         print("starting engine")
+
+; # #     def change_gear(self):
+; # #         print("changing gear")
+; # # # #         # print("company",self.company)
+
+; # # class Car(Vehicle):
+; # #     def open_door(self):
+; # #         print("opening door")
+
+; # # c=Car("bmw","m5","black",3000,"petrol")
+; # # c.start_engine()
+; # # c.change_gear()
+; # # c.open_door()
+
+; # # ------------------------------------------------------------------
+
+; # class Vehicle:
+; #     def __init__(self,company,model,color,engine,fuel):
+; #         self.company=company
+; #         self.model=model
+; #         self.color=color
+; #         self.engine=engine
+; #         self.fuel=fuel
+;     
+; #     def start_engine(self):
+; #         print("starting engine")
+
+; #     def change_gear(self):
+; #         print("changing gear")
+
+; # class Car(Vehicle):
+; #     def __init__(self,company,model,color,engine,fuel,body_type):#company,model,color,engine,fuel
+; #         super().__init__(company,model,color,engine,fuel)
+; #         self.body_type=body_type 
+;         
+; #     def open_door(self):
+; #         print("opening door")
+;         
+; # c=Car("bmw","m5","black",3000,"petrol",'suv')
+
+; # print(c.color)
+; # print(c.body_type)
+; # c.change_gear()
+
+; # -------------------------------------------------------------
+
+; # Multiple inheritence
+
+; # When a class can be derived from more than one base class this type of inheritance is 
+; # called multiple inheritances. In multiple inheritances, all the features of the base 
+; # classes are inherited into the derived class. 
+
+
+; class Mother:
+;     mothername = ""
+
+;     def mother(self):
+;         print(self.mothername)
+
+
+; class Father:
+;     fathername = ""
+
+;     def father(self):
+;         print(self.fathername)
+
+; class Son(Mother, Father):
+;     def parents(self):
+;         print("Father :", self.fathername)
+;         print("Mother :", self.mothername)
+;         
+; s1 = Son()
+; s1.fathername = "RAM"
+; s1.mothername = "SITA"
+; s1.parents()
+; s1.mother()
+; s1.father()
+
+#sample fact
+
+n=3
+fact=1
+for i in n:
+fact=fact*in
